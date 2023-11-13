@@ -31,9 +31,9 @@ let cal = document.querySelector('[type="button"]');
 let des = document.querySelector("[display='des']");
 
 
-cal.addEventListener('click', function(){
-    output.textContent = calculateBMI(parseInt(mass.value), parseInt(height.value))
+function displayOutput(){
+    output.textContent = calculateBMI(parseInt(mass.value), parseInt(height.value)).toFixed(2)
     des.textContent = bmiStats(calculateBMI(parseInt(mass.value), parseInt(height.value)))
-});
+}
 
 
